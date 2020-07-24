@@ -160,16 +160,8 @@ def restart():
     board = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     button_placement_iterator = 1
     pieces_placed = 0
-    board_buttons[0].destroy()
-    board_buttons[1].destroy()
-    board_buttons[2].destroy()
-    board_buttons[3].destroy()
-    board_buttons[4].destroy()
-    board_buttons[5].destroy()
-    board_buttons[6].destroy()
-    board_buttons[7].destroy()
-    board_buttons[8].destroy()
-    board_buttons[9].destroy()
+    for deletebuttons in range(len(board_buttons)):
+        board_buttons[0].destroy()
     board_buttons = []
     for restart1 in range(10):
         board_buttons.append(Button(frame_game, height=5, width=10, text=restart1))
